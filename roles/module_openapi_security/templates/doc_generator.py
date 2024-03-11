@@ -871,8 +871,8 @@ def main():
             # api_object = data["paths"]["/firewall/policy"]["post"]
             api_object = data["paths"][str(sys.argv[2])]["post"]
         global_var_mgmt_dict = {}
+        post_properties = OrderedDict()
         if request_fields:
-            post_properties = OrderedDict()
             post_properties.update(
                 {
                     "properties": ckp_params_fields_parsing(
